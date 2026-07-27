@@ -1,46 +1,219 @@
 <!DOCTYPE html>
-<title>Web App - Simple Interest Calculator</title>
-
-<html>
-    <head>
-    <script src="script.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fenil Patel — Computer Science student and Frontend Developer specializing in JavaScript, React, and the MERN stack.">
+    <meta property="og:title" content="Fenil Patel - Portfolio">
+    <meta property="og:description" content="Frontend Developer & Computer Science Student">
+    <title>Fenil Patel - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    </head>
+    <header id="top">
+        <div class="profile_name">Fenil Patel</div>
+        <nav class="topmenu">
+            <a href="#about">About Me</a>
+            <a href="#projects">Project Details</a>
+            <a href="#skills">Skills</a>
+            <a href="#recommendations">Recommendations</a>
+            <a href="#top" class="iconbutton" aria-label="Scroll to top"><i class="fas fa-home"></i></a>
+        </nav>
+    </header>
 
-    <body>
-        <div class = "maindiv" style="margin-top: 10%; margin-left: 35%;">
-            <h1><center>Simple Interest Calculator</center></h2><br>
-            <div style="margin-left: 12%">
-                Principal Amount:<input type="number"  id="principal"> <br><br>
-                Rate of Interest : <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()" ><span id="rate_val" >10.25%</span><br><br>
-                Number of Years: <select id="years" style="width: 12%; text-align: center;";>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select><br><br><br>
+    <main>
 
-                <button onclick="compute()" style="width: 80%; height: 50%; margin-left: 2%; font-size: medium; text-align: center;">Compute Interest</button><br><br>
-                <span id="result"></span><br><br>
-
-                
-                <span id="result"></span> 
-
-                <footer>
-                    © Everyone Can Get Rich <br>
-                    This Calculator belongs to Kunaal Gupta
-                </footer>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="assets/profile.png" alt="Fenil Patel - Profile Photo" class="profile-img">
+                </div>
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I am</p>
+                    <h1>Fenil Patel</h1>
+                    <div class="hero-titles">
+                        <span>Computer Science Student</span>
+                        <span>Frontend Developer</span>
+                        <span>MERN Learner</span>
+                    </div>
+                    <p class="hero-intro">I craft responsive, accessible web experiences with clean code and thoughtful design. Currently exploring the full MERN stack.</p>
+                    <a href="#projects" class="cta-btn" aria-label="View my projects">View My Work <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a Computer Science student driven by curiosity and a genuine love for building things on the web. My focus is frontend development, where I spend most of my time working with JavaScript and React to create responsive, intuitive interfaces.</p>
+                    <p>I am currently learning the full MERN stack and exploring how backend systems connect with the frontend experiences I build. Problem solving is what keeps me going — whether it is debugging a complex layout or designing a clean component architecture.</p>
+                    <p>I value writing clean, maintainable code and believe continuous learning is not optional in this field. I am always looking for new challenges and opportunities to grow as a developer and contribute to meaningful projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="assets/html.svg" alt="HTML5 Logo">
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, accessible document structure, and modern HTML5 APIs for building the web's foundation.</p>
+                    <div class="progress-track"><div class="progress-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill">
+                    <img src="assets/css.svg" alt="CSS3 Logo">
+                    <h3>CSS3</h3>
+                    <p>Responsive layouts with Flexbox, Grid, custom properties, transitions, and modern design systems.</p>
+                    <div class="progress-track"><div class="progress-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill">
+                    <img src="assets/javascript.svg" alt="JavaScript Logo">
+                    <h3>JavaScript</h3>
+                    <p>ES6+ features, DOM manipulation, async programming, and building interactive web applications.</p>
+                    <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill">
+                    <img src="assets/react.svg" alt="React Logo">
+                    <h3>React</h3>
+                    <p>Component-driven architecture, hooks, state management, and single-page application development.</p>
+                    <div class="progress-track"><div class="progress-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill">
+                    <img src="assets/node.svg" alt="Node.js Logo">
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript, Express APIs, RESTful services, and full-stack MERN development.</p>
+                    <div class="progress-track"><div class="progress-fill" data-width="65"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-title">Project Details</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="project-body">
+                        <h3>EstateOps</h3>
+                        <p>A real estate operations platform with property listings, tenant management, maintenance tracking, and an interactive dashboard for landlords and property managers.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" aria-label="EstateOps GitHub"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-primary" aria-label="EstateOps Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <div class="project-body">
+                        <h3>DubAI Studio</h3>
+                        <p>An AI-powered audio dubbing and voice synthesis studio for content creators. Features real-time waveform visualization, multi-language support, and batch processing.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span><span>Web Audio API</span><span>Python</span><span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" aria-label="DubAI Studio GitHub"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-primary" aria-label="DubAI Studio Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-body">
+                        <h3>TaskFlow</h3>
+                        <p>A collaborative project management tool with Kanban boards, real-time task assignments, progress analytics, and team communication features.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Firebase</span><span>CSS Grid</span><span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" aria-label="TaskFlow GitHub"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-primary" aria-label="TaskFlow Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section id="recommendations">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="recommendations-container">
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <div class="recommendation">
+                        <p class="recommendation-text">"Fenil demonstrates remarkable problem-solving abilities and writes exceptionally clean code. His understanding of frontend fundamentals goes beyond his experience level, and his willingness to learn makes him a standout collaborator."</p>
+                        <div class="recommendation-author">
+                            <strong>Arjun Mehta</strong>
+                            <span>Senior Developer, TechNova</span>
+                        </div>
+                    </div>
+                    <div class="recommendation">
+                        <p class="recommendation-text">"Working with Fenil on our capstone project was impressive. He took ownership of the entire frontend architecture and delivered a responsive, accessible interface ahead of schedule. His attention to detail is commendable."</p>
+                        <div class="recommendation-author">
+                            <strong>Priya Sharma</strong>
+                            <span>Project Lead, CodeCraft Labs</span>
+                        </div>
+                    </div>
+                    <div class="recommendation">
+                        <p class="recommendation-text">"Fenil has a natural talent for translating complex requirements into intuitive user interfaces. His React components are well-structured and his CSS is remarkably clean. A developer who genuinely cares about the end user experience."</p>
+                        <div class="recommendation-author">
+                            <strong>David Chen</strong>
+                            <span>UX Engineer, PixelForge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>Leave a Recommendation</h3>
+                    <form id="recommendationForm" novalidate>
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="text" id="inputName" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputProfession">Profession</label>
+                            <input type="text" id="inputProfession" placeholder="Your role and company">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRecommendation">Recommendation</label>
+                            <textarea id="inputRecommendation" placeholder="Write your recommendation here..." required></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" aria-label="Submit recommendation">Submit Recommendation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fenil Patel. Built with care.</p>
+    </footer>
+
+    <!-- Popup (hidden by default) -->
+    <div class="popup-overlay" id="popup" role="dialog" aria-label="Success notification">
+        <div class="popup-content">
+            <i class="fas fa-check-circle popup-icon"></i>
+            <h2>Recommendation Added Successfully!</h2>
+            <button class="popup-btn" id="popupClose" aria-label="Close popup">OK</button>
         </div>
+    </div>
 
-    </body>
-
-
+    <script src="script.js"></script>
+</body>
 </html>
